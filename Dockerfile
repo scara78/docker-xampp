@@ -17,7 +17,7 @@ RUN apt-get update --fix-missing && \
   apt-get -y install nano vim less --no-install-recommends && \
   apt-get clean
 
-RUN curl -Lo xampp-linux-installer.run $XAMPP_URL && \
+RUN curl -Lo https://downloadsapachefriends.global.ssl.fastly.net/8.1.2/xampp-linux-x64-8.1.2-0-installer.run?from_af=true && \
   chmod +x xampp-linux-installer.run && \
   bash -c './xampp-linux-installer.run' && \
   ln -sf /opt/lampp/lampp /usr/bin/lampp && \
