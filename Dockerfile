@@ -12,6 +12,7 @@ RUN apt-get update --fix-missing && \
   apt-get upgrade -y && \
   # curl is needed to download the xampp installer, net-tools provides netstat command for xampp
   apt-get -y install curl net-tools && \
+  apt-get -y install wget && \
   apt-get -yq install openssh-server supervisor && \
   # Few handy utilities which are nice to have
   apt-get -y install nano vim less --no-install-recommends && \
