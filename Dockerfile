@@ -18,9 +18,9 @@ RUN apt-get update --fix-missing && \
   apt-get -y install nano vim less --no-install-recommends && \
   apt-get clean
 
-RUN wget https://downloadsapachefriends.global.ssl.fastly.net/8.1.2/xampp-linux-x64-8.1.2-0-installer.run?from_af=true xampp-linux-installer.run && \
-  chmod +x xampp-linux-installer.run && \
-  bash -c './xampp-linux-installer.run' && \
+RUN wget https://downloadsapachefriends.global.ssl.fastly.net/8.1.2/xampp-linux-x64-8.1.2-0-installer.run?from_af=true && \
+  chmod +x xampp-linux-x64-8.1.2-0-installer.run?from_af=true && \
+  bash -c './xampp-linux-x64-8.1.2-0-installer.run?from_af=true' && \
   ln -sf /opt/lampp/lampp /usr/bin/lampp && \
   # Enable XAMPP web interface(remove security checks)
   sed -i.bak s'/Require local/Require all granted/g' /opt/lampp/etc/extra/httpd-xampp.conf && \
